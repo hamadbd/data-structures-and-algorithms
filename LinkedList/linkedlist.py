@@ -24,7 +24,7 @@ class Node:
         except:
             return False
 
-    def ToString(self):
+    def __str__(self):
         Temp = self.head
         if (Temp != None):
             list = []
