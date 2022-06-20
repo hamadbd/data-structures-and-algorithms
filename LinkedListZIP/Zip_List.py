@@ -82,27 +82,6 @@ class LinkedList:
             if current is None:
                 raise ValueError(f'node with value {value} it is not founded')
 
-    def kth_from_end(self, k):
-        if k < 0:
-            return 'your input should be positive value'
-        else:
-            if self.head is None:
-                return 'Empty linked list'
-            else:
-                length = 0
-                current = self.head
-                while current:
-                    current = current.next
-                    length += 1
-                if length - 1 < k:
-                    return 'your input is greater than the length of the list'
-                else:
-                    location = length - k
-                    current = self.head
-                    for pointer in range(location-1):
-                        current = current.next
-                    return current.value
-
     def to_string(self):
         """
         to  represent all the values in the Linked List, formatted
@@ -118,21 +97,20 @@ class LinkedList:
         return formatting
 
 def zipLists(list1, list2):
-    # Start pointing the nodes
-    curr1 = list1.head
-    curr2 = list2.head
-    while curr1 != None and curr2 != None:
-        next1 = curr1.next
-        next2 = curr2.next
-        curr2.next = next1
-        curr1.next = curr2
-        curr1 = next1
-        curr2 = next2
-        list2.head = curr2
-    #Handle the case where list1 become empty before list2
-    if curr2:
-        list1.Append(curr2.data)
-    return list1.ToString()
+    point1 = list1.head
+    point2 = list2.head
+    while point1 != None and point2 != None:
+        next1 = point1.next
+        next2 = point2.next
+        point2.next = next1
+        point1.next = point2
+        point1 = next1
+        point2 = next2
+        list2.head = point2
+    # checker
+    if point2:
+        list1.Append(point2.data)
+    return list1.to_string()
 
 
 if __name__ == '__main__':
@@ -140,15 +118,17 @@ if __name__ == '__main__':
     list1.append(1)
     list1.append(3)
     list1.append(2)
+    print()
 
     list2 = LinkedList()
     list2.append(5)
-    # list2.Append(9)
-    # list2.Append(4)
+    list2.append(9)
+    list2.append(4)
+    print()
+
 
     list1.to_string()
-    print()
     list2.to_string()
-    print()
 
-    zipLists(list1,list2)
+
+    print(zipLists(list1,list2))
