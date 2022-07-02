@@ -9,3 +9,5 @@
 | LinkedlistInsertions | [InsertionsLinkedlist](https://github.com/hamadbd/data-structures-and-algorithms/blob/main/LinkedListInsertions)|
 | LinkedlistKTH | [KTHLinkedList](https://github.com/hamadbd/data-structures-and-algorithms/tree/main/LinkedListKTH)|
 | LinkedlistZIP | [ZIPLinkedList](https://github.com/hamadbd/data-structures-and-algorithms/tree/main/LinkedListZIP)|
+| Stack&Queue | [Stack&Queue](https://github.com/hamadbd/data-structures-and-algorithms/tree/main/Stack%26Queue)|
+| Stack&Queue Pesuedo | [Stack&Queue Pesuedo](https://github.com/hamadbd/data-structures-and-algorithms/tree/main/Stack%26QueuePesuedo)|
